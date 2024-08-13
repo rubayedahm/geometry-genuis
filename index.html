@@ -15,35 +15,103 @@
   <body class="m-8">
     <header></header>
     <main>
-        <!-- Main content container -->
-         <div class="flex">
-            <!-- shape card container -->
-             <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Triangle shape -->
-                <div class="card bg-base-100 w-80 shadow-md">
-                    <figure>
-                      <img
-                        src="images/triangle.png"
-                        alt="Shoes" />
-                    </figure>
-                    <div class="card-body text-center">
-                      <h2 class="card-title text-3xl">Triangle</h2>
-                      <p>Area (A) = 0.5 x b x h</p>
-                      <div>
-
-                      </div>
-                      <div class="card-actions">
-                        <button class="btn btn-primary w-full bg-[#1090D8] outline-0 border-0 text-white">Buy Now</button>
-                      </div>
-                    </div>
-                  </div>
-     
-             </div>
-             <!-- area card container -->
-              <div class=" bg-base-100 w-80 shadow-md text-center border-1 h-96 p-8 rounded-md">
-                <h3 class="text-3xl">Area Calculation</h3>
+      <!-- Main content container -->
+      <div class="flex">
+        <!-- shape card container -->
+        <div
+          class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          <!-- Triangle shape -->
+          <div class="card bg-base-100 w-80 shadow-md">
+            <figure>
+              <img src="images/triangle.png" alt="Shoes" />
+            </figure>
+            <div class="card-body text-center">
+              <h2 class="card-title text-3xl block">Triangle</h2>
+              <p>Area (A) = 0.5 x b x h</p>
+              <div class="flex my-4">
+                <input
+                  type="text"
+                  id="triangle-base"
+                  placeholder="b"
+                  class="w-24 border py-1 px-3 bg-slate-200 rounded-md"
+                />
+                <span class="mx-2">cm</span>
+                <input
+                  type="text"
+                  id="triangle-height"
+                  placeholder="h"
+                  class="w-24 border py-1 px-3 bg-slate-200 rounded-md"
+                />
+                <span class="mx-2">cm</span>
               </div>
-         </div>
+              <div>
+                <p>
+                  Area: <span id="triangle-area" class="font-bold"></span
+                  ><span>cm<sup>2</sup></span>
+                </p>
+              </div>
+              <div class="card-actions">
+                <button
+                  onclick="calculateTriangleArea()"
+                  class="btn btn-primary w-full bg-[#1090D8] outline-0 border-0 text-white hover:bg-white hover:text-black"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Rectangle shape -->
+          <div class="card bg-base-100 w-80 shadow-md">
+            <figure>
+              <img src="images/rectangle.png" alt="Shoes" />
+            </figure>
+            <div class="card-body text-center">
+              <h2 class="card-title text-3xl block">Triangle</h2>
+              <p>Area (A) = w x I</p>
+              <div class="flex my-4">
+                <input
+                  type="text"
+                  id="triangle-base"
+                  placeholder="w"
+                  class="w-24 border py-1 px-3 bg-slate-200 rounded-md"
+                />
+                <span class="mx-2">cm</span>
+                <input
+                  type="text"
+                  id="triangle-height"
+                  placeholder="|"
+                  class="w-24 border py-1 px-3 bg-slate-200 rounded-md"
+                />
+                <span class="mx-2">cm</span>
+              </div>
+              <div>
+                <p>
+                  Area: <span id="triangle-area" class="font-bold"></span
+                  ><span>cm<sup>2</sup></span>
+                </p>
+              </div>
+              <div class="card-actions">
+                <button
+                  onclick="calculateRectangleArea()"
+                  class="btn btn-primary w-full bg-[#1090D8] outline-0 border-0 text-white hover:bg-white hover:text-black">
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- area card container -->
+        <div
+          class="bg-base-100 w-80 shadow-md text-center border-1 h-96 p-8 rounded-md"
+        >
+          <h3 class="text-3xl">Area Calculation</h3>
+        </div>
+      </div>
     </main>
+
+    <script src="scripts/triangle.js"></script>
+    <script src="scripts/rectangle.js"></script>
   </body>
 </html>
